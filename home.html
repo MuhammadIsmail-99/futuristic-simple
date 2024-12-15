@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="home">
+        <header class="header">
+            <nav class="navbar">
+                <a href="/" class="logo">
+                    <img src="./images/logo.svg" alt="Futuristic Logo" class="logo-image" />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><button class="takeTestBtn">Take Test</button></li>
+                </ul>
+            </nav>
+
+            <section class="header-container">
+                <div class="header-text-container">
+                    <h1>
+                        Discover Your <br /> Future. <span>Redefined.</span>
+                    </h1>
+                    <p>
+                        Futuristic helps you find your ideal career path with personalized recommendations tailored to
+                        your skills, passions, and goals.
+                    </p>
+                </div>
+                <div class="header-image-container">
+                    <img src="images/img1.png" alt="Person working on a laptop" />
+                </div>
+            </section>
+        </header>
+
+        <section class="whyChoose-container">
+            <div class="whyChoose-image-container">
+                <div class="whyChoose-overlay"></div>
+                <img src="./images/whyChoose.svg" alt="Futuristic" />
+            </div>
+            <div class="whyChoose-text-container">
+                <h1>Why Choose Futuristic?</h1>
+                <p>
+                    Your career is more than a job—it's your passion. Futuristic uses
+                    cutting-edge technology to analyze your strengths and match you with
+                    opportunities where you'll thrive. Your future starts here.
+                </p>
+                <button class="explore-button">Explore More</button>
+            </div>
+        </section>
+
+        <section class="feature-container-whole">
+            <h1>Features</h1>
+            <div class="features-container">
+                <div class="feature">
+                    <div class="feature-header">
+                        <h2>AI-driven recommendations</h2>
+                    </div>
+                    <div class="feature-image">
+                        <img src="images/featuresImageOne.svg" alt="AI-driven recommendations" />
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-header">
+                        <h2>Insights into trending career paths</h2>
+                    </div>
+                    <div class="feature-image">
+                        <img src="./images/featuresImageTwo.svg" alt="Insights into trending career paths" />
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-header">
+                        <h2>Expert resources and tools</h2>
+                    </div>
+                    <div class="feature-image">
+                        <img src="./images/featuresImageThree.svg" alt="Expert resources and tools" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ShapeTomorrow">
+            <img src="./images/shapeTomorrowImage.svg" alt="Group of friends taking a selfie" />
+            <div class="ShapeTomorrow-text">
+                <h1>#Shape Tomorrow</h1>
+            </div>
+        </div>
+
+        <div class="newsletter-container">
+            <div class="newsletter-container-left">
+                <h2 class="newsletter-title">Subscribe to our <br>newsletter</h2>
+                <p class="newsletter-description">
+                    Subscribe to our newsletter, stay connected. We'll email you with <br>our
+                    updates and career-related things.
+                </p>
+                <table id="newsletterForm">
+                    <tr>
+                        <td>
+                            <input
+                                type="email"
+                                id="emailInput"
+                                class="table-input"
+                                placeholder="Enter your mail"
+                                required
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <button type="submit" class="table-button">
+                                Subscribe
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="newsLetterImage-container">
+                <img src="./images/newsLetterImage.svg" alt="Newsletter" class="newsletter-image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            if (email) {
+                console.log("Email submitted:", email);
+                alert("Thank you for subscribing! Your email: " + email);
+                document.getElementById('emailInput').value = ""; 
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        });
+    </script>
+</body>
+
+</html>
